@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6e5e6;
+}
+
+html {
+    cursor: url("https://fortnite-api.com/images/cosmetics/br/cid_860_athena_commando_f_elastic/variants/pettemperament/mat7.png") 25 25, auto;
+}
+
+#gift {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 600px;
+  background-color: #f5c7cf;
+  border: 10px solid #b8868d;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#gift.open .flap.left {
+  transform: rotateY(90deg);
+}
+
+#gift.open .flap.right {
+  transform: rotateY(-90deg);
+}
+
+#gift .flap {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 600px;
+  background-color: #f5c7cf;
+  border: 10px solid #b8868d;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+}
+
+#gift .flap.left {
+  left: 0;
+  transform-origin: left center;
+  transform: rotateY(0deg);
+}
+
+#gift .flap.right {
+  left: 200px;
+  transform-origin: right center;
+  transform: rotateY(0deg);
+}
+
+#gift img {
+  width: 200px;
+  margin-top: 20px;
+  border-radius: 50%;
+  border: 5px solid #b8868d;
+}
+
+#message {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #ff94b6;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#message.show-message {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 0.5s ease-in-out forwards;
+}
+
+#button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#button {
+  background-color: #b8868d;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #a8707d;
+  cursor: url("https://fortnite-api.com/images/cosmetics/br/cid_860_athena_commando_f_elastic/variants/pettemperament/mat7.png") 25 25, auto;
+}
+
+h1 {
+  color: #ff8a80;
+}
+
+@keyframes shine {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.shine {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 1s ease-in-out;
+}
